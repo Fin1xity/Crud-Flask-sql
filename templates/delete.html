@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL Data</title>
+    <h1> Delete</h1>
+</head>
+<hr style = "border: 1px solid #1F1F21;">
+<body style="background-color:aquamarine;">
+    <form action="/deleteout" method="get">
+        <br>
+        Enter Table Name: 
+        <input type="text" name="tname"><br>
+        Enter primary key name:
+        <input type="text" name="c1"><br>
+        Enter Value:
+        <input type="text" name="val">
+        <br><br>
+        <button type="submit" style="background-color:#FDCF76">Submit</button>
+    </form><br>
+    <form action="/home" method="get">
+        <button style="background-color:#1F1F21; color: white;">Back</button>
+    </form>
+    {%if error%}
+        <h3> Error !!!</h3>
+    {% endif %}
+    {%if done%}
+        <h3> Data Deleted !!!</h3>
+    {% endif %}
+</body>
+</html>

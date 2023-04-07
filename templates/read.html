@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL Data</title>
+    <h1> Read</h1>
+</head>
+<hr style = "border: 1px solid #1F1F21;">
+<body style="background-color:#85E3FF;">
+    <form action="/readout" method="get">
+        Enter Table Name: 
+        <input type="text" name="t1">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form> <br>
+    <form action="/home" method="get">
+        <button style="background-color:#1F1F21; color: white;">Back</button>
+    </form><br>
+    <hr style = "border: 1px solid #1F1F21;">
+    {%if error%}
+    <h4> No Table found with name "{{error}}" !!! </h4>
+    {%endif%}
+    <br>
+    {%if rows%}
+        <h3> -----Table----- </h3>
+        <table border=2px >
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>game</th>
+            </tr>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {%endif%} 
+</body>
+</html>

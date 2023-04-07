@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL Data</title>
+    <h1> Create</h1>
+</head>
+<hr style = "border: 1px solid #1F1F21;">
+<body style="background-color:#99D2FE;">
+    <h2> Create Table </h2>
+    <form action="/tableout" method="get">
+        <br>
+        Enter Table Name: 
+        <input type="text" name="tname"><br>
+        Enter 1st column name:
+        <input type="text" name="c1">
+        <select name= "data1">
+            <option value="INTEGER">Integer</option>
+            <option value="TEXT">Text</option>
+        </select><br>
+        Enter 2nd column name:
+        <input type="text" name="c2">
+        <select name= "data2">
+            
+            <option value="INTEGER">Integer</option>
+            <option value="TEXT">Text</option>
+        </select><br>
+        Enter 3rd column name:
+        <input type="text" name="c3">
+        <select name= "data3">
+            <option value="INTEGER">Integer</option>
+            <option value="TEXT">Text</option>
+        </select><br><br>
+        <button type="submit" style="background-color:#FDCF76">Submit</button>
+    </form><br>
+    <form action="/create" method="get">
+        <button style="background-color:#1F1F21; color: white;">Back</button>
+    </form>
+    {%if error%}
+        <h3> Error !!!</h3>
+    {% endif %}
+    {%if done%}
+        <h3> Table Created !!!</h3>
+    {% endif %}
+</body>
+</html>

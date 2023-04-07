@@ -1,0 +1,35 @@
+<head>
+    <title>SQL Data</title>
+    <h1>Update</h1>
+</head>
+<hr style = "border: 1px solid #1F1F21;">
+<body style="background-color:#e7ffac">
+    <form method="get" action="/upout">
+      <label for="id">Enter table name:</label>
+      <input type="text" name="table"><br>
+      <br>
+      Enter Primary Key: 
+      <input type="text" name="id" required><br>
+      Enter PK_value: 
+      <input type="text" name="id_val" required><br><br>
+      Enter Column 1 Name:
+      <input type="text" name="col1"><br>
+      Enter Column 1 New Value:
+      <input type="text" name="val1"><br><br>
+      Enter Column 2 Name:
+      <input type="text" name="col2"><br>
+      Enter Column 2 New Value:
+      <input type="text" name="val2"><br><br>
+      <button type="submit" style="background-color:#FDCF76">Submit</button>
+    </form>
+    <form action="/home" method="get">
+        <button style="background-color:#1F1F21; color: white;">Back</button>
+    </form>
+    {%if done%}
+        <h2> Update completed !!! </h2>
+    {% endif %}
+    {%if error%}
+        <h2> Error !!!</h2>
+    {% endif %}
+</body>
+</html>
